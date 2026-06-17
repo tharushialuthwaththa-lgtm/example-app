@@ -1,0 +1,79 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+}
+
+.products{
+
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 1540px;
+
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+
+}
+
+.card{
+    width:100%;
+    max-width:220px;
+    margin:auto;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+.card h4{
+    font-size: 18px;
+}
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+/* Tablet */
+@media (max-width:992px){
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* Phone */
+@media (max-width:576px){
+
+
+    .products{
+        margin-top: 840px; /* Navbar height එක අනුව 120-160px අතර adjust කරන්න */
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        max-width:320px;
+    }
+
+    .card img{
+        height:250px;
+    }
+    .products{
+        padding:90px 20px 20px;
+        margin-top: 900px;
+    }
+}
