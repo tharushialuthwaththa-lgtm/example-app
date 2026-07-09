@@ -57,7 +57,7 @@ body{
     border-radius:13px;
 }
 .login-container{
-    min-height:calc(100vh - 70px);
+    min-height:calc(120vh - 40px);
     display:flex;
     justify-content:center;
     align-items:center;
@@ -71,7 +71,7 @@ body{
     padding:35px;
     border-radius:15px;
     box-shadow:0 5px 20px rgba(0,0,0,.15);
-    margin-top: 150px;
+    margin-top: 250px;
 }
 
 .login-box h2{

@@ -1,15 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
 <!-- Navbar -->
 <header>
     <nav class="navbar">
@@ -27,9 +17,9 @@
         <div class="sidebar" id="sidebar">
 
             <ul class="nav-links">
-                <li><a class="nav-link" href="{{route('customer-home')}}">Home</a></li>
+                <li><a class="nav-link" href="{{route('customers-home')}}">Home</a></li>
 
-                <li><a class="nav-link" href="{{route('customer-about')}}">About us</a></li>
+                <li><a class="nav-link" href="{{route('customers-about')}}">About us</a></li>
 
 
 
@@ -58,11 +48,11 @@
                         <div class="sidebar" id="sidebar">
 
                             <ul class="nav-links">
-                                <li><a class="nav-link" href="{{route('customer-home')}}">Home</a></li>
+                                <li><a class="nav-link" href="{{route('customers-home')}}">Home</a></li>
 
-                                <li><a class="nav-link" href="{{route('customer-about')}}">About us</a></li>
+                                <li><a class="nav-link" href="{{route('customers-about')}}">About us</a></li>
                                 <li><a class="nav-link" href="{{ route('login') }}">Login</a></li>
-                                <li><a class="nav-link" href="{{route('customer-contact')}}">Contact</a></li>
+                                <li><a class="nav-link" href="{{route('customers-contact')}}">Contact</a></li>
                                 <li><a class="nav-link" href="{{route('products')}}">Products</a></li>
 
 

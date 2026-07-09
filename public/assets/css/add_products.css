@@ -1,0 +1,35 @@
+.card{
+    border:none;
+    border-radius:12px;
+}
+
+.card-body h2{
+    font-size:34px;
+    font-weight:bold;
+}
+
+.table th,
+.table td{
+    text-align:center;
+    vertical-align:middle;
+}
+
+.table img{
+    width:60px;
+    height:60px;
+    object-fit:cover;
+}
+
+.btn{
+    margin:2px;
+}
+
+.badge{
+    font-size:13px;
+    padding:7px 12px;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    transition:.3s;
+}

@@ -20,10 +20,7 @@ class AdminController extends Controller
     {
         return view('contact');
     }
-    public function products()
-    {
-        return view('products');
-    }
+
     public function login()
     {
         return view('login');
@@ -38,13 +35,27 @@ class AdminController extends Controller
         return view('admin.dashboard');
     }
 
+
     public function orders()
     {
-        return view('orders');
+        return view('admin.orders');
     }
+
     public function customers()
     {
-        return view('customers');
+        return view('admin.customers.index');
+    }
+
+    public function products()
+    {
+        return view('admin.add_products');
+    }
+
+
+
+    public function productDetails($id)
+    {
+        return view('product_details');
     }
 }
 

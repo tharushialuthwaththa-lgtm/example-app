@@ -20,7 +20,7 @@
     <div class="product-grid">
 
         <div class="card">
-
+            <a href="{{ route('product.details', 1) }}">
             <div class="product-top">
                 <img src="../../assets/img/sh1.jpg" alt="Red Roses">
             </div>

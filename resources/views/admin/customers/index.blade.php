@@ -1,43 +1,34 @@
 @extends('layouts.admin')
 
-@section('title', 'Products')
+@section('title', 'Customers')
 
 @section('content')
 
     <div class="row g-4 mb-4">
 
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-4 col-md-6">
             <div class="card bg-primary text-white shadow">
                 <div class="card-body text-center">
-                    <h5>Total Products</h5>
-                    <h2>120</h2>
+                    <h5>Total Customers</h5>
+                    <h2>250</h2>
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-4 col-md-6">
             <div class="card bg-success text-white shadow">
                 <div class="card-body text-center">
-                    <h5>In Stock</h5>
-                    <h2>95</h2>
+                    <h5>Active Customers</h5>
+                    <h2>220</h2>
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-4 col-md-6">
             <div class="card bg-warning shadow">
                 <div class="card-body text-center">
-                    <h5>Low Stock</h5>
-                    <h2>18</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-            <div class="card bg-danger text-white shadow">
-                <div class="card-body text-center">
-                    <h5>Out of Stock</h5>
-                    <h2>7</h2>
+                    <h5>New Customers</h5>
+                    <h2>30</h2>
                 </div>
             </div>
         </div>
@@ -47,10 +38,10 @@
     <div class="card shadow">
 
         <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
-            <h5 class="mb-0">Product List</h5>
+            <h5 class="mb-0">Customer List</h5>
 
-            <button class="btn btn-success">
-                <i class="fa fa-plus"></i> Add Product
+            <button class="btn btn-success btn-sm">
+                <i class="fa fa-plus"></i> Add Customer
             </button>
         </div>
 
@@ -64,11 +55,11 @@
 
                     <tr>
                         <th>ID</th>
-                        <th>Image</th>
-                        <th>Product</th>
-                        <th>Category</th>
-                        <th>Price</th>
-                        <th>Stock</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>City</th>
+                        <th>Orders</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
@@ -78,23 +69,13 @@
                     <tbody>
 
                     <tr>
-                        <td>P001</td>
-
-                        <td>
-                            <img src="{{ asset('assets/img/img1.jpg') }}"
-                                 width="60"
-                                 class="rounded">
-                        </td>
-
-                        <td>Men T-Shirt</td>
-                        <td>Clothing</td>
-                        <td>Rs. 2,500</td>
-                        <td>45</td>
-
-                        <td>
-                            <span class="badge bg-success">Available</span>
-                        </td>
-
+                        <td>C001</td>
+                        <td>Nimal Perera</td>
+                        <td>nimal@gmail.com</td>
+                        <td>0771234567</td>
+                        <td>Colombo</td>
+                        <td>10</td>
+                        <td><span class="badge bg-success">Active</span></td>
                         <td>
                             <button class="btn btn-info btn-sm">
                                 <i class="fa fa-eye"></i>
@@ -111,23 +92,13 @@
                     </tr>
 
                     <tr>
-                        <td>P002</td>
-
-                        <td>
-                            <img src="{{ asset('assets/img/img2.jpg') }}"
-                                 width="60"
-                                 class="rounded">
-                        </td>
-
-                        <td>Women's Dress</td>
-                        <td>Dress</td>
-                        <td>Rs. 4,500</td>
-                        <td>30</td>
-
-                        <td>
-                            <span class="badge bg-success">Available</span>
-                        </td>
-
+                        <td>C002</td>
+                        <td>Kasun Silva</td>
+                        <td>kasun@gmail.com</td>
+                        <td>0712345678</td>
+                        <td>Kandy</td>
+                        <td>5</td>
+                        <td><span class="badge bg-success">Active</span></td>
                         <td>
                             <button class="btn btn-info btn-sm">
                                 <i class="fa fa-eye"></i>
@@ -144,25 +115,13 @@
                     </tr>
 
                     <tr>
-                        <td>P003</td>
-
-                        <td>
-                            <img src="{{ asset('assets/img/img3.jpg') }}"
-                                 width="60"
-                                 class="rounded">
-                        </td>
-
-                        <td>Sports Shoes</td>
-                        <td>Footwear</td>
-                        <td>Rs. 6,500</td>
+                        <td>C003</td>
+                        <td>Amali Fernando</td>
+                        <td>amali@gmail.com</td>
+                        <td>0769876543</td>
+                        <td>Galle</td>
                         <td>8</td>
-
-                        <td>
-                        <span class="badge bg-warning text-dark">
-                            Low Stock
-                        </span>
-                        </td>
-
+                        <td><span class="badge bg-secondary">Inactive</span></td>
                         <td>
                             <button class="btn btn-info btn-sm">
                                 <i class="fa fa-eye"></i>
@@ -179,25 +138,13 @@
                     </tr>
 
                     <tr>
-                        <td>P004</td>
-
-                        <td>
-                            <img src="{{ asset('assets/img/sh1.jpg') }}"
-                                 width="60"
-                                 class="rounded">
-                        </td>
-
-                        <td>Leather Bag</td>
-                        <td>Bags</td>
-                        <td>Rs. 8,000</td>
-                        <td>0</td>
-
-                        <td>
-                        <span class="badge bg-danger">
-                            Out of Stock
-                        </span>
-                        </td>
-
+                        <td>C004</td>
+                        <td>Saman Jayasuriya</td>
+                        <td>saman@gmail.com</td>
+                        <td>0754567890</td>
+                        <td>Matara</td>
+                        <td>3</td>
+                        <td><span class="badge bg-success">Active</span></td>
                         <td>
                             <button class="btn btn-info btn-sm">
                                 <i class="fa fa-eye"></i>

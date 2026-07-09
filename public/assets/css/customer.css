@@ -4,12 +4,8 @@
 }
 
 .card-body h2{
-    font-size:38px;
+    font-size:35px;
     font-weight:bold;
-}
-
-.card-body h5{
-    margin-bottom:15px;
 }
 
 .table th{
@@ -26,13 +22,6 @@
 }
 
 .badge{
-    padding:8px 12px;
-}
-
-@media(max-width:768px){
-
-    .card-body h2{
-        font-size:28px;
-    }
-
+    font-size:13px;
+    padding:7px 12px;
 }

@@ -30,7 +30,7 @@
             and accessories for modern customers.
         </p>
 
-        <a class="nav-link" href="{{route('customer-products')}}"> class="btn">
+        <a class="nav-link" href="{{route('customers-products')}}"> class="btn">
             Shop Now
         </>
     </div>

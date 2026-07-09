@@ -1,0 +1,16 @@
+.color-circle{
+
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    border:none;
+    cursor:pointer;
+    margin-right:10px;
+
+}
+
+.color-circle:hover{
+
+    transform:scale(1.2);
+
+}
