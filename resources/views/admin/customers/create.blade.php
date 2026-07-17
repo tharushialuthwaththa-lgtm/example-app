@@ -1,63 +1,56 @@
 @extends('layouts.admin')
 
-@section('title', 'Add Customer')
+@section('title','Add Customer')
 
 @section('content')
 
-    <div class="card shadow">
-        <div class="card-header">
-            <h4>Add Customer</h4>
-        </div>
-
-        <div class="card-body">
-
-            <form action="" method="POST">
-                @csrf
-
-                <div class="mb-3">
-                    <label>id</label>
-                    <input type="email" id="id" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                    <label>Name</label>
-                    <input type="text" name="name" class="form-control">
-                </div>
+<h2>Add Customer</h2>
 
 
-                <div class="mb-3">
-                    <label>Email</label>
-                    <input type="text" name="email" class="form-control">
-                </div>
+<form action="{{ route('customers.store') }}" method="POST">
 
-                <div class="mb-3">
-                    <label>Phone no</label>
-                    <input type="text" name="phone" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                    <label>City</label>
-                    <input type="text" name="city" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                    <label>Orders</label>
-                    <input type="text" name="orders" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                    <label>Status</label>
-                    <input type="text" name="status" class="form-control">
-                </div>
+@csrf
 
 
-                <button type="submit" class="btn btn-success">
-                    Save Customer
-                </button>
+<input type="text" name="name" 
+placeholder="Customer Name"
+class="form-control mb-2">
 
-            </form>
 
-        </div>
-    </div>
+<input type="email" name="email"
+placeholder="Email"
+class="form-control mb-2">
+
+
+<input type="text" name="phone"
+placeholder="Phone"
+class="form-control mb-2">
+
+
+<input type="text" name="city"
+placeholder="City"
+class="form-control mb-2">
+
+
+<input type="number" name="orders"
+placeholder="Orders"
+class="form-control mb-2">
+
+
+<select name="status" class="form-control mb-2">
+
+<option value="Active">Active</option>
+
+<option value="Inactive">Inactive</option>
+
+</select>
+
+
+<button class="btn btn-success">
+Save Customer
+</button>
+
+
+</form>
 
 @endsection

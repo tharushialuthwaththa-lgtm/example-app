@@ -26,7 +26,7 @@
     </li>
 
     <li>
-        <a href="{{ route('customers') }}">
+        <a href="{{ route('admin.customers.create') }}">
             <i class="fa fa-users"></i> Customers
         </a>
     </li>

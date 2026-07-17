@@ -46,7 +46,7 @@ Route::get('/products/create', [AdminController::class,'products'])->name('admin
 
 Route::get('/orders', [AdminController::class,'orders'])->name('admin.orders');
 
-Route::get('/customers', [AdminController::class,'customers'])->name('admin.customers');
+
 
 // Admin
 Route::get('/admin/products', [ProductController::class, 'index'])
@@ -55,10 +55,11 @@ Route::get('/admin/products', [ProductController::class, 'index'])
 
 
 
-Route::get('/customers', [CustomerController::class, 'index'])->name('customers');
-
-Route::get('/customers/create', [CustomerController::class, 'create'])->name('customers.create');
+Route::resource('customers', CustomerController::class);
 
 
+Route::get('/customers/create', [CustomerController::class, 'create'])
+->name('customer.create');
 
+Route::get('/customers', [CustomerController::class, 'index'])->name('customer.index');
 

@@ -49,9 +49,11 @@
             </li>
 
             <li>
-                <a href="{{ route('customers') }}">
+                <a href="{{ route('customer.index') }}">
                     <i class="fa fa-users"></i> Customers
                 </a>
+
+               
             </li>
 
             <li>

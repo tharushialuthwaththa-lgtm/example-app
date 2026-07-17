@@ -3,31 +3,37 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Customer;
 
 class CustomerController extends Controller
 {
     public function index()
-
     {
-        return view('admin.customers.index');
+        $customers = Customer::all();
+
+        return view('admin.customers.index', compact('customers'));
     }
 
+  
     public function create()
     {
-        return view('admin.customers.create');
-    }
-    public function edit()
-    {
-        return view('admin.customers.edit');
-    }
-    public function show()
-    {
-        return view('admin.customers.show');
+        return view('customers.create');
     }
 
-    public function products()
+    public function store(Request $request)
     {
-        return view('products');
+        Customer::create($request->all());
+
+        return redirect()->route('customers.index');
+    }
+
+    public function edit(Customer $customer)
+    {
+        return view('customers.edit', compact('customer'));
+    }
+
+    public function show(Customer $customer)
+    {
+        return view('customers.show', compact('customer'));
     }
 }
